@@ -1,3 +1,6 @@
+📌 Project Title
+Implementation of PCA with ANN Algorithm for Face Recognition
+
 📖 Overview
 This project implements a Face Recognition System using Principal Component Analysis (PCA) for feature extraction and a Multi-Layer Perceptron (ANN / MLP) classifier for face classification.
 The system follows the classic Eigenfaces approach, where high-dimensional face images are converted into a low-dimensional feature space using PCA, followed by classification using an Artificial Neural Network.
