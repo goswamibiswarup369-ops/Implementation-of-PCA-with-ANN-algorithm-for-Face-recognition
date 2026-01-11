@@ -1,0 +1,80 @@
+📤 Output of the Code
+After executing the program, the following outputs are generated:
+
+1️⃣ Dataset Information (Printed Output)
+The program first prints basic information about the dataset:
+
+Text
+Number of samples: <n_samples>
+Number of features: 90000
+Number of classes: <n_classes>
+Explanation:
+Number of samples: Total number of face images loaded from all folders.
+Number of features: Each image is resized to 300 × 300, resulting in 300 × 300 = 90,000 pixel values per image.
+Number of classes: Total number of unique persons (folders).
+
+2️⃣ Eigenfaces Visualization (PCA Output)
+After applying PCA with n_components = 150, the system displays a gallery of Eigenfaces.
+What you see:
+Grayscale face-like images
+Each eigenface represents a principal component
+These eigenfaces capture dominant facial features such as eyes, nose, and face contours
+Meaning:
+PCA converts high-dimensional images into a low-dimensional space
+Eigenfaces represent the directions of maximum variance
+Noise and redundant information are reduced
+
+3️⃣ PCA Projection Shapes
+Printed output:
+Text
+Projecting the input data on the eigenfaces orthonormal basis
+(X_train_pca.shape, X_test_pca.shape)
+Example:
+
+Text
+(270, 150) (180, 150)
+Explanation:
+Each face image is now represented by 150 PCA features
+Original 90,000-dimensional data is reduced to just 150 dimensions
+
+4️⃣ ANN (MLPClassifier) Training Output
+During ANN training, the following is displayed:
+Text
+Iteration 1, loss = 2.52
+Iteration 2, loss = 2.50
+Iteration 3, loss = 2.47
+...
+Iteration n, loss = 0.08
+Explanation:
+These are training loss values
+Loss gradually decreases, showing that:
+The neural network is learning
+Error is being minimized using back-propagation
+Training stops after max_iter = 1000 or convergence
+
+5️⃣ Face Recognition Visualization (Final Output)
+After prediction, a gallery of test images is displayed.
+Each image is labeled as:
+Text
+pred: <Predicted_Name>, pr: <Probability>
+true: <Actual_Name>
+Example:
+
+pred: Alia, pr: 0.9
+true: Alia
+Explanation:
+pred → Name predicted by the ANN
+pr → Confidence probability of prediction
+true → Actual person name
+Correct predictions show matching pred and true
+
+6️⃣ Accuracy Output (Final Result)
+Printed at the end:
+
+Text
+Accuracy: 70.79
+Meaning:
+The system correctly recognized approximately 71% of the test images
+Accuracy is calculated as:
+
+   Accuracy=(Correct Prediction/Total Test Sample)*100
